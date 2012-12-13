@@ -2,6 +2,50 @@ body {
     position: relative;
     padding-top: 60px;
     margin: 0px;
+    height: 100%;
+}
+
+.dropdown-menu {
+    border-radius: 3px;
+}
+
+.btn {
+    border-radius: 2px;
+}
+
+.btn-group .btn:first-child {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.btn-group .btn:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.btn-grey {
+    background: #eaeaea; /* Old browsers */
+    background: -moz-linear-gradient(top,  #eaeaea 0%, #d1d1d1 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#eaeaea), color-stop(100%,#d1d1d1)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #eaeaea 0%,#d1d1d1 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #eaeaea 0%,#d1d1d1 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #eaeaea 0%,#d1d1d1 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #eaeaea 0%,#d1d1d1 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#d1d1d1',GradientType=0 ); /* IE6-9 */
+    border-color: #999999;
+    box-shadow: 0 0 3px #ddd;
+}
+
+.btn-grey:hover {
+    background: #d1d1d1; /* Old browsers */
+    background: -moz-linear-gradient(top,  #d1d1d1 0%, #eaeaea 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d1d1d1), color-stop(100%,#eaeaea)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #d1d1d1 0%,#eaeaea 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #d1d1d1 0%,#eaeaea 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #d1d1d1 0%,#eaeaea 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #d1d1d1 0%,#eaeaea 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d1d1d1', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+
 }
 
 .navbar-inner {
@@ -29,8 +73,32 @@ body {
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
 }
 
-.navbar-inner .nav li a{
-    border-radius: 3px;
+.navbar-inner .nav {
+    margin: 5px 0 0 0;
+}
+
+.navbar-inner .nav li a {
+    border-radius: 20px;
+    padding: 0 15px;
+    height: 28px;
+    line-height: 28px;
+    color: #444;
+    border: 1px solid transparent;
+}
+
+.navbar-inner .nav li.active a {
+    border:1px solid #bbb;
+}
+
+.navbar-inner .brand {
+    background: url("/assets/img/fueldns.png") no-repeat left center;
+    height: 30px;
+    width:151px;
+    overflow: hidden;
+    text-indent: -500px;
+    display: block;
+    margin: 5px 20px 0 0;
+    padding: 0px;
 }
 
 .xfluid {
@@ -43,6 +111,7 @@ body {
     margin: 0px;
     padding: 0px;
     position: absolute;
+    overflow: hidden;
 }
 
 .xspan .xspan-inner {
@@ -62,37 +131,69 @@ body {
     background: linear-gradient(to bottom,  #fbfaf9 0%,#eeeded 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfaf9', endColorstr='#eeeded',GradientType=0 ); /* IE6-9 */
     border-bottom: 1px solid #bfbfbf;
-    padding: 10px 20px 0 20px;
-    height: 50px;
-    overflow: hidden;
+    padding: 9px 20px 0 20px;
+    height: 45px;
     margin: 0px;
-    font-size: 32px;
     position: relative;
     z-index: 444;
 }
 
-.domain-records .domains-head {
-    box-shadow: 0 0 3px #ccc;
+.domains-head h1.lead {
+    margin: 0px;
+    padding: 5px 0 0 0;
+    font-size: 26px;
 }
 
-.domain-records .lead {
-    font-weight: bold;
+.domain-records .domains-head {
+    padding: 10px 15px 0 15px;
+    height: 135px;
+}
+
+.domain-records h1.lead {
+    font-size: 32px;
+    padding: 20px 0 0 0;
     color: #444;
 }
 
-.domains-head .lead {
-    margin: 0px;
-    padding: 5px 0 0 0;
-    font-size: 28px;
+.domain-records-table {
+    overflow: auto;
+    height: 100%;
+    vertical-align: middle;
+    font-size: 12px;
+}
+.domain-records-table table td {
+    vertical-align: middle;
+}
+.domain-records-table table thead tr {
+    background: #dedede;
+    border-top:1px solid #fff;
+    vertical-align: middle;
+}
+
+.domain-records-contact {
+    margin: 18px 0 0 0;
+    opacity: 0.7;
 }
 
 .domains-head .btn {
     margin: 5px 0 0 0;
 }
 
+.domain-listing .domains-head h1.lead {
+    margin: 0px;
+    padding: 4px 0 0 0;
+    font-size: 22px;
+}
+
+
 .domain-listing .domains-head {
     border-right: 1px solid #aaa;
     border-bottom: 1px solid #b1b8bf;
+    box-shadow: 0 0 5px #ccc;
+    padding: 10px 15px 0 15px;
+    height: 50px;
+    position: relative;
+    z-index: 555;
 }
 
 .domain-listing .xspan-inner {
@@ -112,7 +213,7 @@ ul.domain-listing-nav {
     display: block;
     float: none;
     position: relative;
-    border-top:1px solid #e0e5ea;
+    overflow: auto;
 
 }
 
@@ -127,7 +228,7 @@ ul.domain-listing-nav li {
 
 ul.domain-listing-nav li a {
     color: #333;
-    font-weight: bold;
+    font-weight: 500;
     border-top: 1px solid transparent;
     border-bottom: 1px solid transparent;
     font-size: 12px;
@@ -151,9 +252,61 @@ ul.domain-listing-nav li.active a, ul.domain-listing-nav li.active:hover a {
     border-top: 1px solid #8eabcc;
     border-bottom: 1px solid #6382a4;
     color: #fff;
-    text-shadow: 0px 1px 0 #333;
+    text-shadow: 0px 1px 0 #555;
+}
+
+ul.domain-listing-nav li.active a i, ul.domain-listing-nav li.active:hover a i {
+    background-image: url("../img/glyphicons-halflings-white.png");
+}
+
+ul.domain-listing-nav li a span, ul.domain-listing-nav li.active a span {
+    float: right;
+    color: #a6b3cb;
+}
+
+ul.domain-listing-nav li.active a span {
+    color: #fff;
 }
 
 ul.domain-listing-nav li:hover a {
     background: #babfc7;
+}
+
+.xunit {
+    text-align: center;
+    margin: 150px 0 0 0;
+}
+
+.xunit h1 {
+    font-size: 72px;
+    margin: 0 0 30px 0;
+}
+
+.xunit-welcome {
+    text-align: left;
+    margin:100px 0 0 100px
+}
+
+.xunit-welcome h1 {
+    font-size: 52px;
+    margin: 0 0 20px 0;
+}
+
+.domain-search {
+    border-top: 1px solid #fff;
+    border-bottom:1px solid #b2b8bf;
+    box-shadow: 0 0 15px #aaa;
+    position: relative;
+    z-index: 333;
+}
+
+.domain-search form {
+    margin: 0px;
+    padding: 10px 15px;
+    position: relative;
+    float: none;
+}
+
+.domain-search form input {
+    border: 2px solid #a7bed8;
 }

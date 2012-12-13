@@ -1,28 +1,18 @@
 
-<div class="row-fluid">
-    <div class="span3">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>domain</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach($domains as $domain) { ?>
-                <tr>
-                    <td><?= $domain->id; ?></td>
-                    <td><a href="/domains/records/<?= $domain->id; ?>"><?= $domain->name; ?></a></td>
-                </tr>
-                <?php } ?>
-            </tbody>
-        </table>
+
+
+    <div class="xspan-inner">
+        <div class="domain-records-table">
+            <div class="xunit">
+                <h1>Domains (<?= count($domains); ?>)</h1>
+                <p class="lead">Choose domain from left menu to manage its records and configuration</p>
+                <p>-OR-</p>
+                <a href="/domains/add" class="btn btn-large btn-grey"><i class="icon icon-plus"></i> Add New Domain</a>
+            </div>
+        </div>
+    </div>
     </div>
 
-    <div class="span9">
-
-        Domain details
+    <div class="clearfix"></div>
 
     </div>
-
-</div>
