@@ -5,6 +5,24 @@ body {
     height: 100%;
 }
 
+.domains-head .input-append, .domains-head .btn-group {
+    margin: 0px;
+}
+
+.domains-head input {
+    margin-top: 5px;
+}
+
+.select-input {
+    max-height: 415px;
+    overflow: auto;
+}
+
+.input-error {
+    border: 1px solid #c00;
+    background: #003399;
+}
+
 .dropdown-menu {
     border-radius: 3px;
 }
@@ -169,10 +187,14 @@ body {
     border-top:1px solid #fff;
     vertical-align: middle;
 }
-
+.domain-records-table table tr.record_type th {
+    background: #fafafa;
+    font-weight: bold;
+    color: #777;
+}
 .domain-records-contact {
     margin: 18px 0 0 0;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .domains-head .btn {
@@ -199,7 +221,7 @@ body {
 .domain-listing .xspan-inner {
     box-shadow: 0 0 5px #ccc;
     border-right: 1px solid #aaa;
-    background:#d4dbe3;
+    background:#dbe0e7;
     position: relative;
     z-index: 333;
     padding: 0px;
@@ -215,6 +237,13 @@ ul.domain-listing-nav {
     position: relative;
     overflow: auto;
 
+}
+
+ul.domain-listing-nav .no_result {
+    text-align: center;
+    padding: 40px 20px;
+    color: #717e8b;
+    text-shadow: 1px 1px 0 #fff;
 }
 
 ul.domain-listing-nav li {
@@ -309,4 +338,57 @@ ul.domain-listing-nav li:hover a {
 
 .domain-search form input {
     border: 2px solid #a7bed8;
+}
+
+.alert p {
+    margin: 0px;
+    padding: 0px;
+}
+
+#add_record_block {
+    display: none;
+    border:0px;
+}
+
+#add_record_block td {
+    background: #f3fae1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0px solid #bdc5a9
+}
+
+.record_row .er_input {
+    display: none;
+}
+
+.record_row .er_group .er_input {
+    border: 1px solid #8da7c7;
+    border-radius: 2px;
+    font-size: 12px;
+    padding: 0px 5px;
+    height: auto;
+    margin: 0px;
+    float: left;
+}
+
+.record_row .er_group_addon .er_input {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.record_row .er_group .er_input_addon {
+    background: #8da7c7;
+    display: block;
+    color: #fff;
+    position: relative;
+    margin: 0;
+    float: left;
+    border: 1px solid #8da7c7;
+    border-left:0px;
+    padding: 0 5px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.record_row .record_save_btn {
+    display: none;
 }

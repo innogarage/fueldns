@@ -1,4 +1,27 @@
 <?php
+// devpass
+
+session_start();
+
+$devpass = "0999";
+
+if (!isset($_SESSION['devpass']) || $_SESSION['devpass'] !== md5($devpass)) {
+
+	if (isset($_POST['pass']) && $_POST['pass'] == $devpass) {
+
+		$_SESSION['devpass'] = md5($_POST['pass']);
+		header("Location: /"); exit;
+		echo "<form style=margin:100px method=get><input type=submit value=enter />";
+
+	} else {
+
+		echo "<h1>Coming soon...</h1><form method=post><input style=border:0px type=password name=pass />";
+
+	}
+
+	exit;
+
+}
 
 // FuelDNS App
 
@@ -35,7 +58,8 @@ if (defined('ENVIRONMENT'))
 	switch (ENVIRONMENT)
 	{
 		case 'development':
-			error_reporting(E_ALL);
+            error_reporting(E_ALL);
+            ini_set("display_errors", 1);
 		break;
 	
 		case 'testing':
